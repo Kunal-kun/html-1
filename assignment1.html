@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Shop | Place Your Order</title>
+    <link rel="icon" href="./img/ba36dc82e1e70fdd2889a0ed4f84bf0e.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Pizza Shop - Delicious Pizzas, Fast Delivery</h1>
+        <p>Get your pizza with just a few clicks!</p>
+        <figure>
+            <img src="./img/Pizza-3007395.jpg" alt="Pizza Shop Front" class="header-image">
+        </figure>
+    </header>
+
+    <!-- Order Section -->
+    <main>
+        <section id="order-section">
+            <h2>Customize Your Pizza</h2>
+
+            <figure>
+                <img src="images/image3.jpg" alt="Delicious Pizza" class="form-image">
+            </figure>
+
+            <form method="GET">
+                <div>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="phone">Contact Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div>
+                    <label for="pizza-count">Number of Pizzas:</label>
+                    <input type="number" id="pizza-count" name="pizza-count" min="1" required>
+                </div>
+
+                <fieldset>
+                    <legend>Select Pizza Size:</legend>
+                    <label for="small"><input type="radio" id="small" name="size" value="Small" required> Small</label>
+                    <label for="medium"><input type="radio" id="medium" name="size" value="Medium"> Medium</label>
+                    <label for="large"><input type="radio" id="large" name="size" value="Large"> Large</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Select Toppings:</legend>
+                    <label for="pepperoni"><input type="checkbox" id="pepperoni" name="toppings" value="Pepperoni"> Pepperoni</label>
+                    <label for="mushrooms"><input type="checkbox" id="mushrooms" name="toppings" value="Mushrooms"> Mushrooms</label>
+                    <label for="onions"><input type="checkbox" id="onions" name="toppings" value="Onions"> Onions</label>
+                </fieldset>
+
+                <div>
+                    <label for="special-instructions">Additional Instructions:</label>
+                    <textarea id="special-instructions" name="special-instructions" rows="4" cols="50"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Submit Order</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Order Confirmation -->
+        <section id="confirmation-section" style="display: none;">
+            <h2>Your Order Details</h2>
+            <article id="confirmation-message">
+                <p>Thank you for your order!</p>
+                <p><strong>Name:</strong> <span id="confirm-name"></span></p>
+                <p><strong>Email:</strong> <span id="confirm-email"></span></p>
+                <p><strong>Phone:</strong> <span id="confirm-phone"></span></p>
+                <p><strong>Pizzas:</strong> <span id="confirm-pizza-count"></span></p>
+                <p><strong>Size:</strong> <span id="confirm-size"></span></p>
+                <p><strong>Toppings:</strong> <span id="confirm-toppings"></span></p>
+                <p><strong>Instructions:</strong> <span id="confirm-instructions"></span></p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
